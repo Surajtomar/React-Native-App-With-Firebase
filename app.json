@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "AppPost",
+    "slug": "AppPost",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "android": {
+      "package": "postApp.chat",
+      "versionCode": 1
+    },
+    "description": "A app project to make chat app",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
