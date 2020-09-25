@@ -1,3 +1,4 @@
+// components to fetch user post list and call showPostCard by flatlist to show deetails of post
 import React, { useContext, useState, useEffect } from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 
@@ -11,6 +12,7 @@ const ShowPost = () => {
   const { uid } = useContext(UserContext);
   const [postsId, setPostsId] = useState(null);
 
+  // function to fetch post list of user
   const getPostsId = async () => {
     await firebase
       .database()

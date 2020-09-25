@@ -1,3 +1,5 @@
+// components to accept firends requets
+
 import React, { useState, useEffect, useContext } from "react";
 import { StyleSheet, Text, View, Button, Image } from "react-native";
 
@@ -12,6 +14,7 @@ const ProfileCardAcceptRequest = ({ senderUid }) => {
 
   const [user, setUser] = useState(null);
 
+  // function to fetch firends request sender profile details
   const getUser = async () => {
     await firebase
       .database()
@@ -21,6 +24,7 @@ const ProfileCardAcceptRequest = ({ senderUid }) => {
       });
   };
 
+  // Finction to accept firends request and make change to database
   const acceptRequest = async () => {
     var databaseRef = firebase.database().ref("users");
 

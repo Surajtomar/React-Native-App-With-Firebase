@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { StyleSheet, Text, View, Button, TextInput } from "react-native";
+import { StyleSheet, Text, View, TextInput } from "react-native";
 
 // Firebase
 import firebase from "firebase/app";

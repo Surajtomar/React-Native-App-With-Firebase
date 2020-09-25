@@ -12,8 +12,12 @@ import {
 //firebase
 import firebase from "firebase/app";
 
+// Globak Stylessheeet
 import { globalStyles } from "../../globalStyles";
+
 import { UserContext } from "../../context";
+
+// Comonent To take input image
 import ImageInput from "../../components/ImageInput";
 
 const AddPost = ({ navigation }) => {
@@ -24,6 +28,7 @@ const AddPost = ({ navigation }) => {
   const [postImageUrl, setPostImageUrl] = useState(null);
   const [friendsList, setFriendsList] = useState(null);
 
+  // function to upload image to furebase storage
   const updatePostImage = async () => {
     const fileName = caption.slice(0, caption.length / 2).toString();
     const response = await fetch(imageUri);
@@ -44,6 +49,7 @@ const AddPost = ({ navigation }) => {
       });
   };
 
+  // function to upload post caption and image url to firebase database
   const updatePostData = async () => {
     var databaseRef = firebase.database().ref();
 
@@ -78,6 +84,7 @@ const AddPost = ({ navigation }) => {
       });
   };
 
+  // function to get user firends list
   const getFirendsList = async () => {
     await firebase
       .database()
@@ -92,6 +99,8 @@ const AddPost = ({ navigation }) => {
   const handleSubmit = () => {
     updatePostImage();
   };
+
+  // condition to check that after postImageUrl recive from firebase storage than only run updatePostData function
   if (postImageUrl && friendsList) updatePostData();
 
   return (

@@ -1,3 +1,5 @@
+//  component to send firends request
+
 import React, { useContext } from "react";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 

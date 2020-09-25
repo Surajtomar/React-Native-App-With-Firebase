@@ -5,9 +5,10 @@ import { StyleSheet, Text, View, TextInput, ScrollView } from "react-native";
 import firebase from "firebase/app";
 
 import { globalStyles } from "../../globalStyles";
+import { UserContext } from "../../context";
+
 import ImageInput from "../../components/ImageInput";
 import AppButton from "../../components/AppButton";
-import { UserContext } from "../../context";
 
 const EditUserDetails = ({ navigation }) => {
   const { uid, user } = useContext(UserContext);
@@ -15,7 +16,8 @@ const EditUserDetails = ({ navigation }) => {
   const [name, setName] = useState(null);
   const [imageUri, setImageUri] = useState(null);
 
-  const updatePost = async () => {
+  // function  to update user details to database
+  const updateUserDetails = async () => {
     const response = await fetch(imageUri);
     const blob = await response.blob();
     await firebase
@@ -67,7 +69,7 @@ const EditUserDetails = ({ navigation }) => {
         value={name}
       />
 
-      <AppButton title="Post" onPress={updatePost} />
+      <AppButton title="Post" onPress={updateUserDetails} />
     </ScrollView>
   );
 };

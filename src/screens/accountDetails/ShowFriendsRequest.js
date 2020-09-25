@@ -1,3 +1,5 @@
+// components to fetch list of firends request from database and call ProfileCardAcceptRequest using flatlist
+
 import React, { useEffect, useState, useContext } from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 
@@ -12,6 +14,7 @@ const ShowFriendsRequest = () => {
 
   const [frindsRequest, setFrindsRequest] = useState(null);
 
+  // finction to fetch friends request form database
   const getFrindsRequest = async () => {
     await firebase
       .database()

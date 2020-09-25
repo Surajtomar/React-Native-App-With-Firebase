@@ -1,3 +1,5 @@
+// components to show messages of recive on right and sender on left side of display
+
 import React, { useContext } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { UserContext } from "../../context";

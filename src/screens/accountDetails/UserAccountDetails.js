@@ -1,4 +1,6 @@
-import React, { useState, useContext, useEffect } from "react";
+// main screen of user account
+
+import React, { useContext, useEffect } from "react";
 import {
   StyleSheet,
   Text,

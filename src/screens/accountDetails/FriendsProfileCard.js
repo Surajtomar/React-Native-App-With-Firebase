@@ -1,3 +1,5 @@
+// Components to show profile of firends
+
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 //Firebase
@@ -7,6 +9,7 @@ import { globalStyles } from "../../globalStyles";
 const FriendsProfileCard = ({ friendUid }) => {
   const [firendProfileDetails, setFirendProfileDetails] = useState(null);
 
+  // function to fetch Firend Profile Details from database
   const getFirendProfileDetails = async () => {
     await firebase
       .database()

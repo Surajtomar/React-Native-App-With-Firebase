@@ -4,7 +4,9 @@ import { useNavigation } from "@react-navigation/native";
 
 // firebase
 import firebase from "firebase/app";
+
 import { UserContext } from "../../context";
+
 import { globalStyles } from "../../globalStyles";
 
 const MessageRequestHandler = ({ friendUid }) => {

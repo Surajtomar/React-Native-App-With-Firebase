@@ -11,3 +11,9 @@ web-build/
 
 # macOS
 .DS_Store
+
+#  firebase config file
+Config.js
+
+# assets 
+assets/**/*

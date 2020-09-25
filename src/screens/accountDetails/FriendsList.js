@@ -5,7 +5,9 @@ import { StyleSheet, Text, View, FlatList } from "react-native";
 import firebase from "firebase/app";
 
 import { UserContext } from "../../context";
+
 import { globalStyles } from "../../globalStyles";
+
 import FriendsProfileCard from "./FriendsProfileCard";
 
 const FriendsList = () => {
@@ -13,6 +15,7 @@ const FriendsList = () => {
 
   const [friendsList, setFriendsList] = useState(null);
 
+  // Function to get friends list form database
   const getFirendsList = async () => {
     await firebase
       .database()
