@@ -13,7 +13,7 @@ web-build/
 .DS_Store
 
 #  firebase config file
-Config.js
+src/Config.js
 
 # assets 
 assets/**/*

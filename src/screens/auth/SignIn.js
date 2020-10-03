@@ -9,7 +9,7 @@ import AppButton from "../../components/AppButton";
 
 const SignIn = ({ navigation }) => {
   const { uid, setUid } = useContext(UserContext);
-  const [email, setEmail] = useState("s@gmail.com");
+  const [email, setEmail] = useState("@gmail.com");
   const [password, setPassword] = useState("123456");
 
   const handleSignUp = () => {
